@@ -1,0 +1,19 @@
+package coding_test;
+
+public class 각도기 {
+
+	int Mysolution(int angle) {
+	    int answer = 0;
+	    if (angle < 90) {answer = 1;}
+	    else if (angle == 90) {answer = 2;}
+	    else if (angle < 180) {answer = 3;}
+	    else {answer = 4;}
+	    return answer;
+	}
+	
+	int solution(int ang) {
+	    int ans = 1;    
+	    return ang<90?1:ang==90?2:ang<180?3:4;
+	}
+
+}
