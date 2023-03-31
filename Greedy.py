@@ -1,0 +1,8 @@
+# 1. 거스름돈
+n = 1760
+count = 0
+coin_type = [500, 100, 50, 10]
+for coin in coin_type:
+    count += n//coin
+    n %= coin
+print(count)
