@@ -1,0 +1,29 @@
+- 자릿수 더하기
+import java.util.*;
+
+public class Solution {
+    public int solution(int n) {
+        int answer = 0;
+        while(true){
+            answer+=n%10;
+            
+            if(n<10) break;
+            
+            n=n/10;
+        }
+        return answer;
+    }
+}
+
+- 짝수와 홀수
+class Solution {
+    public String solution(int num) {
+        String answer = "";
+        if(num % 2 == 0) {
+            answer = "Even";
+        } else {
+            answer = "Odd";
+        }
+        return answer;
+    }
+}
