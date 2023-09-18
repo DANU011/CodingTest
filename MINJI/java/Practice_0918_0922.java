@@ -1,5 +1,4 @@
 // 정수 내림차순으로 배치하기
-
 import java.util.*;
 class Solution {
     public long solution(long n) {
@@ -16,8 +15,16 @@ class Solution {
     }
 }
 
-// 하샤드 수
+import java.util.Arrays;
+class Solution {
+    public long solution(long n) {
+        char[] arr = Long.toString(n).toCharArray();
+        Arrays.sort(arr);
+        return Long.parseLong(new StringBuilder(new String(arr)).reverse().toString());
+    }
+}
 
+// 하샤드 수
 class Solution {
     public boolean solution(int x) {
         boolean answer = true;
