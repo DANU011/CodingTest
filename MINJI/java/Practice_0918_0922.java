@@ -71,3 +71,30 @@ class Solution {
         return answer;
     }
 }
+
+// 서울에서 김서방 찾기
+class Solution {
+    public String solution(String[] seoul) {
+        String answer = "";
+        for(int i = 0; i < seoul.length; i++) {
+            if(seoul[i].equals("Kim")) {
+                answer = "김서방은 " + i + "에 있다";
+            }
+        }
+        return answer;
+    }
+}
+
+// 나누어 떨어지는 숫자 배열
+import java.util.Arrays;
+
+class Solution {
+    public int[] solution(int[] arr, int divisor) {
+        int[] answer = Arrays.stream(arr)
+                            .filter(x -> x % divisor == 0)
+                            .sorted()
+                            .toArray();
+
+        return (answer.length == 0) ? new int[]{-1} : answer;
+    }
+}
