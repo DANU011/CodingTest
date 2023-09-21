@@ -98,3 +98,28 @@ class Solution {
         return (answer.length == 0) ? new int[]{-1} : answer;
     }
 }
+
+// 음양 더하기
+class Solution {
+    public int solution(int[] absolutes, boolean[] signs) {
+        int answer = 0;
+        for (int i = 0; i < absolutes.length; i++) {
+            if (!signs[i]) absolutes[i] = -absolutes[i];
+            answer += absolutes[i];
+        }
+        return answer;
+    }
+}
+
+// 핸드폰 번호 가리기
+class Solution {
+    public String solution(String phone_number) {
+        int length = phone_number.length();
+        StringBuilder answer = new StringBuilder();
+        for (int i = 0; i < length - 4; i++) {
+            answer.append('*');
+        }
+        answer.append(phone_number.substring(length - 4));
+        return answer.toString();
+    }
+}
