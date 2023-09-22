@@ -123,3 +123,37 @@ class Solution {
         return answer.toString();
     }
 }
+
+// 없는 숫자 더하기
+class Solution {
+    public int solution(int[] numbers) {
+        int sum = 45;
+        for (int i : numbers) {
+            sum -= i;
+        }
+        return sum;
+    }
+}
+
+// 제일 작은 수 제거하기
+class Solution {
+    public int[] solution(int[] arr) {
+        if(arr.length == 1){
+            int[] answer = {-1};
+            return answer;
+        }
+        int[] answer = new int[arr.length-1];
+        int min = arr[0];
+        for(int i = 0; i < arr.length; i++) {
+            min = Math.min(min, arr[i]);
+        }
+        int index = 0;
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == min) {
+                continue;
+            }
+            answer[index++] = arr[i];
+        }
+        return answer;
+    }
+}
