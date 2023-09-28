@@ -79,3 +79,30 @@ class Solution {
         return answer;
     }
 }
+
+// 문자열 다루기 기본
+class Solution {
+    public boolean solution(String s) {
+        if(s.length() == 4 || s.length() == 6){
+          try{
+              int x = Integer.parseInt(s);
+              return true;
+          } catch(NumberFormatException e){
+              return false;
+          }
+      }
+      else return false;
+    }
+}
+
+// 행렬의 덧셈
+class Solution {
+    public int[][] solution(int[][] arr1, int[][] arr2) {
+        for(int i = 0; i < arr1.length; i++) {
+            for(int j = 0; j < arr1[0].length; j++) {
+                arr1[i][j] += arr2[i][j];
+            }
+        }
+        return arr1;
+    }
+}
