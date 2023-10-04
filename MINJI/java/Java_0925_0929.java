@@ -113,8 +113,8 @@ import java.util.Scanner;
 class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int height = sc.nextInt();
         int width = sc.nextInt();
+        int height = sc.nextInt();
         String row = "*".repeat(width);
         for (int i = 0; i < height; i++) {
             System.out.println(row);
