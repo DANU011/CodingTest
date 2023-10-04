@@ -106,3 +106,34 @@ class Solution {
         return arr1;
     }
 }
+
+// 직사각형 별찍기
+import java.util.Scanner;
+
+class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int height = sc.nextInt();
+        int width = sc.nextInt();
+        String row = "*".repeat(width);
+        for (int i = 0; i < height; i++) {
+            System.out.println(row);
+        }
+    }
+}
+
+// 최대공약수와 최소공배수
+import java.math.BigInteger;
+
+class Solution {
+    public int[] solution(int n, int m) {
+        int[] answer = new int[2];
+        BigInteger bigN = BigInteger.valueOf(n);
+        BigInteger bigM = BigInteger.valueOf(m);
+        BigInteger gcd = bigN.gcd(bigM);
+        BigInteger lcm = bigN.multiply(bigM).divide(gcd);
+        answer[0] = gcd.intValue();
+        answer[1] = lcm.intValue();
+        return answer;
+    }
+}
