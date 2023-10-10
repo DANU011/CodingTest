@@ -62,4 +62,33 @@ class Solution {
     }
 }
 
-// 
+// 크기가 작은 부분문자열
+class Solution {
+    public int solution(String t, String p) {
+        int len = p.length();
+		long num = Long.parseLong(p);
+		int result = 0;
+		for (int i = 0; i < t.length() - len + 1; i++) {
+			long diff = Long.parseLong(t.substring(i, i + len));
+			if (diff <= num) result++;
+		}
+		return result;
+    }
+}
+
+// 삼총사
+class Solution {
+    public int solution(int[] number) {
+        int answer = 0;
+        for(int i = 0; i < number.length; i++) {
+            for(int j = i + 1; j < number.length; j++) {
+                for(int k = j + 1; k < number.length; k++) {
+                    if(number[i] + number[j] + number[k] == 0) {
+                        answer++;
+                    }
+                }
+            }
+        }
+        return answer;
+    }
+}
