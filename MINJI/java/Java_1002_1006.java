@@ -92,3 +92,39 @@ class Solution {
         return answer;
     }
 }
+
+// 최소직사각형
+class Solution {
+    public int solution(int[][] sizes) {
+        int max_row = 0;
+        int max_col = 0;
+        for(int i = 0; i < sizes.length; i++){
+            if(sizes[i][0] < sizes[i][1]) {
+                int tmp = sizes[i][0];
+                sizes[i][0] = sizes[i][1];
+                sizes[i][1] = tmp;
+            }
+            if(max_row < sizes[i][0]) max_row = sizes[i][0];
+            if(max_col < sizes[i][1]) max_col = sizes[i][1];
+        }
+        return max_row * max_col;
+    }
+}
+
+// 시저 암호
+class Solution {
+    public String solution(String s, int n) {
+        String answer = "";
+            for(char ch : s.toCharArray()) {
+                if(ch == ' ') {
+                    answer += ch;
+                }else if(ch >= 'a' && ch <= 'z'){
+                    answer += (char)('a' + (ch + n - 'a') % 26);
+                }else {
+                    answer += (char)('A' + (ch + n - 'A') % 26);
+                }
+            }
+            System.out.println(answer);
+            return answer;
+    }
+}
