@@ -128,3 +128,35 @@ class Solution {
             return answer;
     }
 }
+
+// 숫자 문자열과 영단어
+class Solution {
+    public int solution(String s) {
+        String[] arr = {"zero","one","two","three","four","five","six","seven","eight","nine"};
+        for(int i = 0; i < arr.length; i++) {
+        	if(s.contains(arr[i])) {
+        		s = s.replace(arr[i], Integer.toString(i));
+        	}
+        }
+        return Integer.parseInt(s);
+    }
+}
+
+// 문자열 내 마음대로 정렬하기
+import java.util.*;
+
+class Solution {
+    public String[] solution(String[] strings, int n) {
+        String[] answer = {};
+        ArrayList<String> arr = new ArrayList<>();
+        for (int i = 0; i < strings.length; i++) {
+            arr.add("" + strings[i].charAt(n) + strings[i]);
+        }
+        Collections.sort(arr);
+        answer = new String[arr.size()];
+        for (int i = 0; i < arr.size(); i++) {
+            answer[i] = arr.get(i).substring(1, arr.get(i).length());
+        }
+        return answer;
+    }
+}
