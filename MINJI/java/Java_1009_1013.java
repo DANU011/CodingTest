@@ -31,3 +31,32 @@ class Solution {
         return answer;
     }
 }
+
+// K번째수
+import java.util.Arrays;
+
+class Solution {
+    public int[] solution(int[] array, int[][] commands) {
+        int[] answer = new int[commands.length];
+        for(int i = 0; i < commands.length; i++){
+            int[] temp = Arrays.copyOfRange(array, commands[i][0] - 1, commands[i][1]);
+            Arrays.sort(temp);
+            answer[i] = temp[commands[i][2] - 1];
+        }
+        return answer;
+    }
+}
+
+// 푸드 파이트 대회
+class Solution {
+    public String solution(int[] food) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1; i < food.length; i++) {
+            int count = food[i] / 2;
+            sb.append(String.valueOf(i).repeat(count));
+        }
+        String answer = sb + "0";
+        answer += sb.reverse();
+        return answer;
+    }
+}
