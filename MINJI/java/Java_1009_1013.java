@@ -60,3 +60,30 @@ class Solution {
         return answer;
     }
 }
+
+// 두 개 뽑아서 더하기
+import java.util.HashSet;
+
+class Solution {
+   public int[] solution(int[] numbers) {
+	   HashSet<Integer> hs = new HashSet<>();
+       for(int i = 0; i < numbers.length - 1; i++){
+           for(int j = i + 1; j < numbers.length; j++){
+               hs.add(numbers[i] + numbers[j]);
+           }
+       }
+       return hs.stream().mapToInt(Integer::intValue).sorted().toArray();
+    }
+}
+
+// 콜라 문제
+class Solution {
+    public int solution(int a, int b, int n) {
+        int count = 0;
+        while(n >= a) {
+            count += n / a * b;
+            n = n / a * b + n % a;
+        }
+		return count;
+    }
+}
