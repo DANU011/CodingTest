@@ -32,4 +32,4 @@ for i in range(m):
         hamming_distance_sum += c + g + a
 
 print(ans)
-print(hamming_distance_sum) 
+print(hamming_distance_sum)

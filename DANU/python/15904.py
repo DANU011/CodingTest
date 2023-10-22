@@ -10,4 +10,4 @@ for i in n:
         print('I love UCPC')
         break
 else:
-    print('I hate UCPC')
+    print('I hate UCPC') 
