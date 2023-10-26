@@ -86,3 +86,42 @@ class Solution {
       return check;
    }
 }
+
+// 소수 찾기
+class Solution {
+    public int solution(int n) {
+      int answer = 0; 
+      boolean[] prime = new boolean[n + 1]; 
+      for(int i = 2; i <= n; i++) 
+      prime[i] = true;
+      int root = (int)Math.sqrt(n); 
+      for(int i = 2; i <= root; i++){
+      if(prime[i] == true) {
+      	 for(int j = i; i * j <= n; j++)
+             prime[i * j] = false; 
+         } 
+      } 
+      for(int i = 2; i <= n; i++) { 
+      if(prime[i] == true)
+         answer++; 
+      } 
+      return answer; 
+    }
+}
+
+// 기사단원의 무기
+class Solution {
+    public int solution(int number, int limit, int power) {
+        int answer = 0;
+        for(int i = 1; i <= number; i++){
+            int cnt = 0;
+            for(int j = 1; j * j <= i; j++){
+                if(j * j == i) cnt++;
+                else if(i % j == 0) cnt += 2;
+            }
+            if(cnt > limit) cnt = power;
+            answer += cnt;
+        }
+        return answer;
+    }
+}
