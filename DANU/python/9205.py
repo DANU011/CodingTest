@@ -31,4 +31,4 @@ for _ in range(test_cases):
     store_locations = [list(map(int, input().split())) for _ in range(store_count)]
     destination = list(map(int, input().split()))
     visited_stores = set()
-    find_path()
+    find_path() 

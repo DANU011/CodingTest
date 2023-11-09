@@ -1,5 +1,4 @@
 # BFS queue
-
 from collections import deque
 
 # 컴퓨터의 수

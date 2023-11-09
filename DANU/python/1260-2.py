@@ -33,4 +33,4 @@ vist2 = [False] * (N + 1)  # bfs 방문
 
 dfs(V)
 print()
-bfs(V)
+bfs(V) 
