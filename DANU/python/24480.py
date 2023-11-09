@@ -23,6 +23,8 @@ def dfs(v):
             continue
         cur += 1
         dfs(to_v)
+        
 dfs(r)
+
 for i in ans[1:]:
     print(i)
