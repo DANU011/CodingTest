@@ -7,4 +7,4 @@ while True:
 
     camping = (l * (v // p)) + min((v % p), l)
     print('Case {}:'.format(i), camping)
-    i += 1
+    i += 1 
