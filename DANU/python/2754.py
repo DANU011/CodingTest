@@ -1,9 +1,12 @@
-n, b = input().split()
-ary = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+score = input()
 
-n = n[::-1]
-res = 0
+alphabets = ['F', 'D', 'C', 'B', 'A']
+res = float(alphabets.index(score[0]))
 
-for i, digit in enumerate(n):
-    res += (int(b) ** i) * (ary.index(digit))
+if res > 0:
+    if score[1] == '+':
+        res += 0.3
+    elif score[1] == '-':
+        res -= 0.3
+
 print(res)
