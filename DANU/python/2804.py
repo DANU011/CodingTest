@@ -1,6 +1,5 @@
 word_A, word_B = input().split()
 rows, cols = len(word_A), len(word_B)
-
 puzzle = [['.'] * rows for _ in range(cols)]
 
 for i, char_A in enumerate(word_A) :
