@@ -12,10 +12,11 @@ def hamming_distance(bi_num1, bi_num2):
 
 def main():
     n = int(input())
-    bi_num1 = input()
-    bi_num2 = input()
-    distance = hamming_distance(bi_num1, bi_num2)
-    print(f"Hamming distance is {distance}.")
+    for _ in range(n):
+        bi_num1 = input()
+        bi_num2 = input()
+        distance = hamming_distance(bi_num1, bi_num2)
+        print(f"Hamming distance is {distance}.")
 
 if __name__ == "__main__":
     main()
