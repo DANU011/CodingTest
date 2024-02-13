@@ -16,7 +16,11 @@ def main():
         bi_num1 = input()
         bi_num2 = input()
         distance = hamming_distance(bi_num1, bi_num2)
+        # print(f"\nHamming distance is {distance}.")
+        # 터미널에서 씹힌거 여기서는 확인되지만 백준에서는 출력 형식이 잘못됐다고 나옴.
+        # 라스트에 넣어서 확인하는 방식 고려
         print(f"Hamming distance is {distance}.")
+
 
 if __name__ == "__main__":
     main()
